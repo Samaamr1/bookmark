@@ -1,0 +1,42 @@
+h1{
+    font-family: "Pacifico", cursive;
+font-size: 50px;
+position: relative;
+}
+
+h1::after{
+    content: "";
+	position: absolute;
+	bottom: 2px;
+	left: 40%;
+	height: 35px;
+	width: 100%;
+   
+    border-left:30px solid transparent;
+    border-top: 20px solid #1B397C;
+    border-bottom: 20px solid  #1B397C;
+}
+
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+i{ 
+    color: #2752B2;
+}
+#btnAdd{
+    background-color: #1B397C;
+    color: #fff;
+    transition: all 0.9s;
+}
+#btnAdd:hover{
+    background-color:#213554;
+
+}
+.datadisplay i{
+    color: #fff;
+}
+#msgName ,#msgName i ,#msgUrl ,#msgUrl i{
+    color: rgb(176, 1, 1);
+    
+}
