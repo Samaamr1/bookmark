@@ -46,7 +46,7 @@ function displayData() {
     <tr>
     <th scope="row">${i+1}</th>
     <td>${namesList[i].name}</td>
-    <td><button onclick="openUrl(${i})" class="btn bg-warning text-white "> <i class="fa-regular fa-eye"></i>  Visit</button></td>
+    <td><button onclick="openUrl('${namesList[i].url}')" class="btn bg-warning text-white "> <i class="fa-regular fa-eye"></i>  Visit</button></td>
     <td><button onclick="deleteItem(${ i })" class=" btn bg-danger text-white"><i class="fa-solid fa-trash"></i>  Delete</button></td>
   </tr>
     `;
@@ -103,7 +103,9 @@ function validationUrl(){
   }
   }
   
-  function openUrl(index) {
-      window.open(namesList[index].url);
-    
+ function openUrl(url) {
+    if (!url.startsWith('http://') && !url.startsWith('https://')) {
+      url = 'http://' + url;
+    }
+    window.open(url);
   }
